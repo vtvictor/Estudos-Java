@@ -27,7 +27,7 @@ public class Core {
 			WebElement campoSenha = driver.findElement(By.id("ContentPlaceHolder1_txtSenha"));
 			WebElement botaoLogin = driver.findElement(By.id("ContentPlaceHolder1_btnlogin"));
 			
-			campoEmail.sendKeys("EMAIL");
+			campoEmail.sendKeys("USUARIO");
 			campoSenha.sendKeys("SENHA");
 			botaoLogin.click();
 			
@@ -62,7 +62,7 @@ public class Core {
 	        System.out.println("Quantidade OE3: "+ teste3);
 	        
 	        
-	        /*Acessar Link da planilha para poder atualizar:*/
+	        //Acessar Link da planilha para poder atualizar:
 	        driver.get("LINK");
 	        
 	        try {
@@ -72,34 +72,9 @@ public class Core {
 	        }
 	        
 	        Actions actions = new Actions(driver);
-	        
 
-	        
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.LEFT).perform();
-			actions.sendKeys(Keys.UP).perform();
-			actions.sendKeys(Keys.DOWN).perform();
-			actions.sendKeys(Keys.DOWN).perform();
-			actions.sendKeys(Keys.DOWN).perform();
-			actions.sendKeys(Keys.DOWN).perform();
-			actions.sendKeys(Keys.DOWN).perform();
+	        moverInicio(actions);
+	         
 	        if (numero % 2 == 0) {
 	            System.out.println("O número é par.");
 				tempoPagina.waitFor(1000);
@@ -113,7 +88,7 @@ public class Core {
 				tempoPagina.waitFor(3000);
 				actions.sendKeys(Keys.ENTER).perform();
 				tempoPagina.waitFor(3000);
-				System.out.println(teste3);
+				System.out.println(valorQuantidadeOE3);
 				numero = numero + 1;
 				driver.quit();
 	            
@@ -145,37 +120,34 @@ public class Core {
 	}
 	
 	
-	public static void moverInicio (String officee1, String officee3, String m365) {
-		MetodosSimplificacao tempoPagina = new MetodosSimplificacao();
-		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		Actions actions = new Actions(driver);
+	public static void moverInicio(Actions actions) {
 		
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		actions.sendKeys(Keys.LEFT).perform();
-		actions.sendKeys(Keys.UP).perform();
-		
-		//Mover ate o nome das licenças:
-		//5 para baixo
-		for(int count=0 ; count >5; count++){
-			actions.sendKeys(Keys.DOWN).perform();
-        }
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(Keys.RIGHT).perform();
-		actions.sendKeys(officee1);
-		
-
-		
-	}
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.LEFT).perform();
+        actions.sendKeys(Keys.UP).perform();
+        actions.sendKeys(Keys.DOWN).perform();
+        actions.sendKeys(Keys.DOWN).perform();
+        actions.sendKeys(Keys.DOWN).perform();
+        actions.sendKeys(Keys.DOWN).perform();
+        actions.sendKeys(Keys.DOWN).perform();
+    }
 	
 	public static void clicarLupa(String licenca) {
 		
