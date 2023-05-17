@@ -27,7 +27,7 @@ public class Core {
 			WebElement campoSenha = driver.findElement(By.id("ContentPlaceHolder1_txtSenha"));
 			WebElement botaoLogin = driver.findElement(By.id("ContentPlaceHolder1_btnlogin"));
 			
-			campoEmail.sendKeys("USUARIO");
+			campoEmail.sendKeys("EMAIL");
 			campoSenha.sendKeys("SENHA");
 			botaoLogin.click();
 			
@@ -53,17 +53,9 @@ public class Core {
 	            e.printStackTrace();
 	        }
 	        
-	        //Teste de quantidade de Licenças (STATUS ATUAL: FUNCIONANDO)
-	        String teste1 = quantidadeO365.getText();
-	        String teste2 = quantidadeOE1.getText();
-	        String teste3 = quantidadeOE3.getText(); 
-	        System.out.println("Quantidade O365: "+ teste1);
-	        System.out.println("Quantidade OE1: "+ teste2);
-	        System.out.println("Quantidade OE3: "+ teste3);
-	        
 	        
 	        //Acessar Link da planilha para poder atualizar:
-	        driver.get("LINK");
+	        driver.get("https://ubla-my.sharepoint.com/:x:/g/personal/ubiratan_souza_adpromotora_com_br/EbbQ04wMp0RErifuvU_MmXkBzTmg9HOmx7h-fAtmN5CZJA");
 	        
 	        try {
 	            Thread.sleep(1000); //Esperar 3 segundos
@@ -84,7 +76,7 @@ public class Core {
 				System.out.println(valorQuantidadeOE1);
 				actions.sendKeys(Keys.DOWN).perform();
 				tempoPagina.waitFor(1000);
-				actions.sendKeys(Keys.chord(teste3)).perform();
+				actions.sendKeys(Keys.chord(valorQuantidadeOE3)).perform();
 				tempoPagina.waitFor(3000);
 				actions.sendKeys(Keys.ENTER).perform();
 				tempoPagina.waitFor(3000);
