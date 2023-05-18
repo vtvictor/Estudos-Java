@@ -141,30 +141,6 @@ public class Core {
         actions.sendKeys(Keys.DOWN).perform();
     }
 	
-	public static void clicarLupa(String licenca) {
-		
-		MetodosSimplificacao tempoPagina = new MetodosSimplificacao();
-		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		WebElement lupa = driver.findElement(By.xpath("Editing_MLR"));
-		tempoPagina.waitFor(1000);
-		lupa.click();
-		
-		Actions actions = new Actions(driver);
-		actions.sendKeys(Keys.DOWN).perform();
-		actions.sendKeys(Keys.ENTER).perform();
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(licenca);
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(Keys.ENTER).perform();
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(Keys.ENTER).perform();
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(Keys.ESCAPE).perform();
-		tempoPagina.waitFor(1000);
-		actions.sendKeys(Keys.RIGHT).perform();	
-		
-	}
 }
 
 
