@@ -23,6 +23,7 @@ public class Core {
 			
 			driver.get("https://www2.brasoftware.com.br/cloudportal/logincontrato.aspx");
 			
+			//Armazenando dados dos campos de digitar o Email, Senha e login.
 			WebElement campoEmail = driver.findElement(By.id("ContentPlaceHolder1_txtLogin"));
 			WebElement campoSenha = driver.findElement(By.id("ContentPlaceHolder1_txtSenha"));
 			WebElement botaoLogin = driver.findElement(By.id("ContentPlaceHolder1_btnlogin"));
@@ -37,6 +38,7 @@ public class Core {
 	            e.printStackTrace();
 	        }
 	        
+	        //Armazenando dados em variaveis referente a quantidade de licenças.
 	        WebElement quantidadeO365 = driver.findElement(By.xpath("//*[@id=\"ContentPlaceHolder1_GridViewProdutosContrato\"]/tbody/tr[1]/td[4]"));
 	        String valorQuantidadeO365 = quantidadeO365.getText();
 			tempoPagina.waitFor(1000);
@@ -55,7 +57,7 @@ public class Core {
 	        
 	        
 	        //Acessar Link da planilha para poder atualizar:
-	        driver.get("https://ubla-my.sharepoint.com/:x:/g/personal/ubiratan_souza_adpromotora_com_br/EbbQ04wMp0RErifuvU_MmXkBzTmg9HOmx7h-fAtmN5CZJA");
+	        driver.get("LINK DA PLANILHA");
 	        
 	        try {
 	            Thread.sleep(1000); //Esperar 3 segundos
@@ -67,6 +69,7 @@ public class Core {
 
 	        moverInicio(actions);
 	         
+	        //Maneira utilizda para burlar sistema do Office online.
 	        if (numero % 2 == 0) {
 	            System.out.println("O número é par.");
 				tempoPagina.waitFor(1000);
@@ -76,6 +79,8 @@ public class Core {
 				System.out.println(valorQuantidadeOE1);
 				actions.sendKeys(Keys.DOWN).perform();
 				tempoPagina.waitFor(1000);
+				
+				//Keys.chord foi uma maneira utilizada para conseguir digitar na planilha online.
 				actions.sendKeys(Keys.chord(valorQuantidadeOE3)).perform();
 				tempoPagina.waitFor(3000);
 				actions.sendKeys(Keys.ENTER).perform();
@@ -111,7 +116,7 @@ public class Core {
 
 	}
 	
-	
+	//Metodo utilizado para poder percorrer sempre a planilha, devido ao fato que o não é possível fazer requisição via inspecionar elemento.
 	public static void moverInicio(Actions actions) {
 		
         actions.sendKeys(Keys.LEFT).perform();
