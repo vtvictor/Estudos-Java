@@ -30,8 +30,8 @@ public class Core {
 		WebElement campoSenha = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[2]/input"));
 		WebElement botaoLogin = driver.findElement(By.xpath("//*[@id=\"loginButton\"]"));
 		
-		campoLogin.sendKeys("victor.silva@adpromotora.com.br");
-		campoSenha.sendKeys("V991218204@");
+		campoLogin.sendKeys("EMAIL");
+		campoSenha.sendKeys("SENHA");
 		botaoLogin.click();
 		
 		//Gerar o Voucher
