@@ -2,6 +2,7 @@ package VoucherGenerator;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,14 +37,20 @@ public class Core {
 		campoSenha.sendKeys("SENHA");
 		botaoLogin.click();
 		
-		waitFor(5000);
-		
-		testesUnitarios.apagarVoucher(driver);
-		
 		waitFor(3000);
+		
+		//Verificar se tem Voucher e caso sim, apague
+		apagarVoucher(driver);
+		
+		waitFor(6000);
 		
 		//Gerar o Voucher
 		gerarVoucher(driver);
+		
+		waitFor(4000);
+		
+		//Copiar o novo Voucher gerado
+		copiarVoucher(driver);
 	}
 	
 	
@@ -79,4 +86,48 @@ public class Core {
 		botaoSave.click();
 	}
 
+	public static void apagarVoucher(WebDriver driver) {
+	    WebElement campoVoucherBotNotes;
+	    
+	    try {
+	        campoVoucherBotNotes = driver.findElement(By.xpath("//*[@id=\"vouchersTable\"]/thead/tr/th[1]/form/input"));
+	        boolean isDisplayed = campoVoucherBotNotes.isDisplayed();
+	        
+	        if (isDisplayed) {
+	        	waitFor(2000);
+	            System.out.println("O campo campoVoucherBotNotes esta disponível na tela.");
+	            campoVoucherBotNotes.click();
+	            WebElement botaoRevoke = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/ui-view/div/div[1]/div/div[2]/div[1]/div/button"));
+	            botaoRevoke.click();	            
+	            WebElement botaoConfirm = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/div[3]/div[12]/div/div/div/div/div[3]/div/div[2]/div/button[2]"));
+	            waitFor(2000);
+	            botaoConfirm.click();
+	            waitFor(2000);
+	            
+	        } else {
+	            System.out.println("O campo campoVoucherBotNotes NAO esta disponível na tela.");
+	        }
+	    } catch (NoSuchElementException e) {
+	        System.out.println("O campo campoVoucherBotNotes não está disponível na tela.");
+	    }
+	}
+	
+	public static void copiarVoucher(WebDriver driver) {
+		WebElement campoCodeVoucher = driver.findElement(By.xpath("//*[@id=\"vouchersTable\"]/tbody/tr/td[2]"));
+		boolean isDisplayed = campoCodeVoucher.isDisplayed();
+		
+		try {
+			if (isDisplayed) {
+				waitFor(2000);
+				String CodigoVoucher = campoCodeVoucher.getText();
+				System.out.println("Voucher: "+CodigoVoucher);
+				
+			}else {
+				System.out.println("Codigo do Voucher NAO existe!");
+			}
+			
+		} catch (NoSuchElementException e) {
+			System.out.print("Codigo do Voucher NAO existe!");
+		}
+	}
 }
