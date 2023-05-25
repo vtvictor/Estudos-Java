@@ -14,6 +14,8 @@ public class Core {
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
+		TestesUnitarios testesUnitarios = new TestesUnitarios();
+		
 		driver.get("https://172.16.10.8:8443/manage/hotspot-manager/site/default/vouchers/1/50");
 		
 		
@@ -34,9 +36,18 @@ public class Core {
 		campoSenha.sendKeys("SENHA");
 		botaoLogin.click();
 		
+		waitFor(5000);
+		
+		testesUnitarios.apagarVoucher(driver);
+		
+		waitFor(3000);
+		
 		//Gerar o Voucher
 		gerarVoucher(driver);
 	}
+	
+	
+	//Metodos:
 	
 	public static void waitFor(int milliseconds) {
 	    try {
@@ -47,7 +58,6 @@ public class Core {
 	}
 	
 	public static void gerarVoucher(WebDriver driver) {
-		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
 		waitFor(2000);
 		WebElement botaoCreateVouchers = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/ui-view/div/div[1]/div/div[1]/div/button[1]/span[2]"));
 		botaoCreateVouchers.click();
