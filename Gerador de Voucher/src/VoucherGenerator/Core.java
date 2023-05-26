@@ -8,49 +8,70 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.Keys;
+import java.time.LocalTime;
 
 public class Core {
 
 	public static void main(String[] args) {
+		
+		LocalTime horarioAtual = LocalTime.now();
+		
+		System.out.println("Hora atual teste: " + horarioAtual);
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		TestesUnitarios testesUnitarios = new TestesUnitarios();
+		while (true) {
+			TestesUnitarios testesUnitarios = new TestesUnitarios();
+			horarioAtual = LocalTime.now();
+			System.out.println("Hora atual teste: " + horarioAtual);
+			//Verificar se é 06:00
+			if(horarioAtual.getHour() == 14 && horarioAtual.getMinute() == 33) {
+				driver.get("LINK");
+				
+				
+				//Pular "Sua conexão não é particular".
+				waitFor(2000);
+				WebElement botaoNParticular = driver.findElement(By.id("details-button"));
+				botaoNParticular.click();
+				WebElement botaoIP = driver.findElement(By.id("proceed-link"));
+				botaoIP.click();
+				
+				//Processo de login
+				waitFor(2000);
+				WebElement campoLogin = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[1]/input"));
+				WebElement campoSenha = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[2]/input"));
+				WebElement botaoLogin = driver.findElement(By.xpath("//*[@id=\"loginButton\"]"));
+				
+				campoLogin.sendKeys("EMAIL");
+				campoSenha.sendKeys("SENHA");
+				botaoLogin.click();
+				
+				waitFor(3000);
+				
+				//Verificar se tem Voucher e caso sim, apague
+				apagarVoucher(driver);
+				
+				waitFor(6000);
+				
+				//Gerar o Voucher
+				gerarVoucher(driver);
+				
+				waitFor(4000);
+				
+				//Copiar o novo Voucher gerado
+				copiarVoucher(driver);
+				
+				
+			}else {
+				System.out.println("Novo Voucher será gerado às 06:00!");
+				waitFor(10000);
+			}
+			
+		}
 		
-		driver.get("https://172.16.10.8:8443/manage/hotspot-manager/site/default/vouchers/1/50");
 		
 		
-		//Pular "Sua conexão não é particular".
-		waitFor(2000);
-		WebElement botaoNParticular = driver.findElement(By.id("details-button"));
-		botaoNParticular.click();
-		WebElement botaoIP = driver.findElement(By.id("proceed-link"));
-		botaoIP.click();
 		
-		//Processo de login
-		waitFor(2000);
-		WebElement campoLogin = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[1]/input"));
-		WebElement campoSenha = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[2]/input"));
-		WebElement botaoLogin = driver.findElement(By.xpath("//*[@id=\"loginButton\"]"));
-		
-		campoLogin.sendKeys("EMAIL");
-		campoSenha.sendKeys("SENHA");
-		botaoLogin.click();
-		
-		waitFor(3000);
-		
-		//Verificar se tem Voucher e caso sim, apague
-		apagarVoucher(driver);
-		
-		waitFor(6000);
-		
-		//Gerar o Voucher
-		gerarVoucher(driver);
-		
-		waitFor(4000);
-		
-		//Copiar o novo Voucher gerado
-		copiarVoucher(driver);
 	}
 	
 	
