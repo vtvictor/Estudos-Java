@@ -23,7 +23,7 @@ public class TestesUnitarios {
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://172.16.10.8:8443/manage/hotspot-manager/site/default/vouchers/1/50");
+		driver.get("LINK");
 		
 		
 		//Pular "Sua conexão não é particular".

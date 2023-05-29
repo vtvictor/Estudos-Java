@@ -63,7 +63,7 @@ public class Core {
 				
 				
 			}else {
-				System.out.println("Novo Voucher será gerado às 06:00!");
+				System.out.println("Novo Voucher será gerado as 06:00!");
 				waitFor(10000);
 			}
 			
