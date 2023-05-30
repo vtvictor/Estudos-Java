@@ -126,10 +126,10 @@ public class Core {
 	            waitFor(2000);
 	            
 	        } else {
-	            System.out.println("O campo campoVoucherBotNotes NAO esta disponível na tela.");
+	            System.out.println("O campo campoVoucherBotNotes NAO esta disponivel na tela.");
 	        }
 	    } catch (NoSuchElementException e) {
-	        System.out.println("O campo campoVoucherBotNotes não está disponível na tela.");
+	        System.out.println("O campo campoVoucherBotNotes NAO esta disponivel na tela.");
 	    }
 	}
 	

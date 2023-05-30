@@ -79,7 +79,7 @@ public class TestesUnitarios {
 	            System.out.println("O campo campoVoucherBotNotes NAO esta disponível na tela.");
 	        }
 	    } catch (NoSuchElementException e) {
-	        System.out.println("O campo campoVoucherBotNotes não está disponível na tela.");
+	        System.out.println("O campo campoVoucherBotNotes nao esta disponível na tela.");
 	    }
 	}
 }
