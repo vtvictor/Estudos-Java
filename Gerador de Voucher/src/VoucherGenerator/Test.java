@@ -6,6 +6,7 @@ public class Test {
 	private int id;
 	
 	
+	
 	LocalTime hora = LocalTime.now();
 
 }
