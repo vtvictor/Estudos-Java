@@ -48,7 +48,7 @@ public class Core {
 				
 				waitFor(3000);
 				
-				//Verificar se tem Voucher e caso sim, apague
+
 				apagarVoucher(driver);
 				
 				waitFor(6000);
