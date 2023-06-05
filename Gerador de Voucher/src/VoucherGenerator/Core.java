@@ -57,7 +57,7 @@ public class Core {
 				
 				waitFor(4000);
 				
-				//Copiar o novo Voucher gerado
+
 				copiarVoucher(driver);
 				
 				
