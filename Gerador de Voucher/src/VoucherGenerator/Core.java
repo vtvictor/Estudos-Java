@@ -53,7 +53,6 @@ public class Core {
 				
 				waitFor(6000);
 				
-				//Gerar o Voucher
 				gerarVoucher(driver);
 				
 				waitFor(4000);
