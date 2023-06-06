@@ -12,7 +12,7 @@ public class Core {
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium webdriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		driver.get("");
+		driver.get(");
 		
 		//Pular "Sua conexão não é particular".
 		waitFor(2000);
@@ -20,10 +20,26 @@ public class Core {
 		botaoNParticular.click();
 		WebElement botaoIP = driver.findElement(By.id("proceed-link"));
 		botaoIP.click();
-		//
 		
 		loginSite("", "", driver);
 		
+		waitFor(2000);
+		
+		driver.get("");
+
+		waitFor(2000);
+		
+		//Dados do UniFi do Atendimento:
+		WebElement unifiAtendimento = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[1]/td[3]/div/div/span"));
+		String stringunifiAtendimento = unifiAtendimento.getText();
+		WebElement unifiAtendimento_status = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[1]/td[4]/div/div/div/span"));
+		String stringunifiAtendimento_status = unifiAtendimento_status.getText();
+		WebElement unifiAtendimento_experience = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[1]/td[8]/div/div/div/span"));
+		String stringunifiAtendimento_experience = unifiAtendimento_experience.getText();
+		
+		
+		
+		System.out.println(stringunifiAtendimento+" | Status: "+stringunifiAtendimento_status+" | Experience: "+stringunifiAtendimento_experience);
 	}
 	
 	
