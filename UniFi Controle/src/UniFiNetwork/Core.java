@@ -71,8 +71,10 @@ public class Core {
 			String stringunifiBasese_experience = unifiBasese_experience.getText();
 			
 			
-			//Dados do UniFi Operacional
 			
+			//Dados do UniFi Operacional
+			WebElement unifiOperacional = driver.findElement(By.xpath(""));
+			String stringunifiOperacional = unifiOperacional.getText();
 			
 			
 			
