@@ -72,7 +72,7 @@ public class Core {
 			
 			
 			
-			//Dados do UniFi Operacional
+			//Dados do UniFi Operacional 
 			WebElement unifiOperacional = driver.findElement(By.xpath(""));
 			String stringunifiOperacional = unifiOperacional.getText();
 			
