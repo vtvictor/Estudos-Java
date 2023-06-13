@@ -76,6 +76,15 @@ public class Core {
 			WebElement unifiOperacional = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[4]/td[3]/div/div/span"));
 			String stringunifiOperacional = unifiOperacional.getText();
 			
+			String textoRemovido_operacional = "AD UNIFI 03 - ";
+			String resultado_operacional = stringunifiOperacional.replace(textoRemovido_operacional, "");
+			
+			WebElement unifiOperacional_status = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[4]/td[4]/div/div/div/span"));
+			String stringunifiOperacional_status = unifiOperacional_status.getText();
+			WebElement unifiOperacional_experience = driver.findElement(By.xpath("//*[@id=\"app-main-panel\"]/div[1]/div/div[2]/div/div/table/tbody/tr[4]/td[8]/div/div/div/span"));
+			String stringunifiOperacional_experience = unifiOperacional_experience.getText();
+			
+			
 			
 			
 			
