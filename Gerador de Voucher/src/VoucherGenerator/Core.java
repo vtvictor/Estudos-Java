@@ -25,8 +25,8 @@ public class Core {
 			horarioAtual = LocalTime.now();
 			System.out.println("Hora atual teste: " + horarioAtual);
 			//Verificar se é 06:00
-			if(horarioAtual.getHour() == 14 && horarioAtual.getMinute() == 33) {
-				driver.get("LINK");
+			if(horarioAtual.getHour() == 15 && horarioAtual.getMinute() == 41) {
+				driver.get("");
 				
 				
 				//Pular "Sua conexão não é particular".
@@ -42,11 +42,17 @@ public class Core {
 				WebElement campoSenha = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[2]/input"));
 				WebElement botaoLogin = driver.findElement(By.xpath("//*[@id=\"loginButton\"]"));
 				
-				campoLogin.sendKeys("EMAIL");
-				campoSenha.sendKeys("SENHA");
-				botaoLogin.click();
+		        boolean isDisplayed_SIGIN = botaoLogin.isDisplayed();
 				
-				waitFor(3000);
+				campoLogin.sendKeys("");
+				campoSenha.sendKeys("");
+				waitFor(2000);
+				botaoLogin.submit();
+				
+
+			
+				
+				waitFor(4000);
 				
 
 				apagarVoucher(driver);
@@ -59,7 +65,6 @@ public class Core {
 				
 
 				copiarVoucher(driver);
-				
 				
 			}else {
 				System.out.println("O novo voucher sera gerado as 06:00 da manha");
@@ -133,6 +138,9 @@ public class Core {
 	}
 	
 	public static void copiarVoucher(WebDriver driver) {
+		waitFor(3000);
+
+		
 		WebElement campoCodeVoucher = driver.findElement(By.xpath("//*[@id=\"vouchersTable\"]/tbody/tr/td[2]"));
 		boolean isDisplayed = campoCodeVoucher.isDisplayed();
 		
@@ -142,6 +150,23 @@ public class Core {
 				String CodigoVoucher = campoCodeVoucher.getText();
 				System.out.println("Voucher: "+CodigoVoucher);
 				
+				driver.get("https://adpromotora.com.br/wifi//voucher.php");
+				
+				WebElement campoSenha_SiteAD = driver.findElement(By.xpath("/html/body/form/input"));
+				campoSenha_SiteAD.sendKeys("ad2023");
+			
+				WebElement botaoLogin_SiteAD = driver.findElement(By.xpath("/html/body/form/input"));
+				botaoLogin_SiteAD.submit();
+				
+				waitFor(2000);
+				
+				WebElement campoInserirSenha_SiteAD = driver.findElement(By.xpath("/html/body/center[2]/span/center/form/input"));
+				campoInserirSenha_SiteAD.sendKeys(CodigoVoucher);
+				
+				WebElement botaoInserir_SiteAD = driver.findElement(By.xpath("/html/body/center[2]/span/center/form/button"));
+				botaoInserir_SiteAD.click();
+				
+				
 			}else {
 				System.out.println("Codigo do Voucher NAO existe!");
 			}
@@ -150,5 +175,11 @@ public class Core {
 			System.out.print("Codigo do Voucher NAO existe!");
 		}
 	}
+
+	public static void atualizarVoucher (WebDriver driver) {
+		
+		
+	}
+	
 }
 //teste
