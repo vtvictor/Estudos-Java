@@ -24,9 +24,9 @@ public class Core {
 			TestesUnitarios testesUnitarios = new TestesUnitarios();
 			horarioAtual = LocalTime.now();
 			System.out.println("Hora atual teste: " + horarioAtual);
-			//Verificar se é 06:00
-			if(horarioAtual.getHour() == 15 && horarioAtual.getMinute() == 41) {
-				driver.get("");
+			//Verificar se é 06:00 da manhã
+			if(horarioAtual.getHour() == 06 && horarioAtual.getMinute() == 00) {
+				driver.get("LINK");
 				
 				
 				//Pular "Sua conexão não é particular".
@@ -41,19 +41,13 @@ public class Core {
 				WebElement campoLogin = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[1]/input"));
 				WebElement campoSenha = driver.findElement(By.xpath("//*[@id=\"unifi-network-app\"]/div/ui-view/ui-view/ui-view/div/div/div/div/div[3]/ui-view/div/form/div[2]/input"));
 				WebElement botaoLogin = driver.findElement(By.xpath("//*[@id=\"loginButton\"]"));
-				
-		        boolean isDisplayed_SIGIN = botaoLogin.isDisplayed();
-				
+						
 				campoLogin.sendKeys("");
 				campoSenha.sendKeys("");
 				waitFor(2000);
 				botaoLogin.submit();
-				
-
-			
-				
-				waitFor(4000);
-				
+		
+				waitFor(4000);				
 
 				apagarVoucher(driver);
 				
@@ -62,7 +56,6 @@ public class Core {
 				gerarVoucher(driver);
 				
 				waitFor(4000);
-				
 
 				copiarVoucher(driver);
 				
@@ -152,10 +145,10 @@ public class Core {
 				
 				driver.get("https://adpromotora.com.br/wifi//voucher.php");
 				
-				WebElement campoSenha_SiteAD = driver.findElement(By.xpath("/html/body/form/input"));
+				WebElement campoSenha_SiteAD = driver.findElement(By.xpath("/html/body/center[2]/span/center/form/input"));
 				campoSenha_SiteAD.sendKeys("ad2023");
 			
-				WebElement botaoLogin_SiteAD = driver.findElement(By.xpath("/html/body/form/input"));
+				WebElement botaoLogin_SiteAD = driver.findElement(By.xpath("/html/body/center[2]/span/center/form/button"));
 				botaoLogin_SiteAD.submit();
 				
 				waitFor(2000);
@@ -175,11 +168,6 @@ public class Core {
 			System.out.print("Codigo do Voucher NAO existe!");
 		}
 	}
-
-	public static void atualizarVoucher (WebDriver driver) {
 		
-		
-	}
 	
 }
-//teste
