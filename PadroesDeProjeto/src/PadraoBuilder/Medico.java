@@ -1,5 +1,9 @@
 package PadraoBuilder;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Medico{
     
     protected String nome;

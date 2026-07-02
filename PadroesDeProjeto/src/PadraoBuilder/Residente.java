@@ -1,5 +1,9 @@
 package PadraoBuilder;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Residente extends Medico {
 
     private int ano_residencia;

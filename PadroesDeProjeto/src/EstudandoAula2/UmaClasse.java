@@ -1,5 +1,9 @@
 package EstudandoAula2;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class UmaClasse {
 	private String nome;
 	public String sobrenome;

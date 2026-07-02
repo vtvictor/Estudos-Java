@@ -1,5 +1,9 @@
 package EstudandoAula2;
 
+/**
+ * implements - classe de exemplo.
+ */
+
 public class Som implements ControleSom{
 
 	@Override

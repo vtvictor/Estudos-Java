@@ -1,6 +1,10 @@
 package PadraoSingleton;
 import java.time.LocalDate;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Paciente {
 
 	private String nome, sexo, cor;

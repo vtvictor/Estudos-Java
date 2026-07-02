@@ -1,5 +1,9 @@
 package PadraoBuilder;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Docente extends Medico {
     private String titulacao;
 

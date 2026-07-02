@@ -1,5 +1,9 @@
 package PadraoSingleton;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Residentes extends IMedico{
 
 	private String titulacao, nome;

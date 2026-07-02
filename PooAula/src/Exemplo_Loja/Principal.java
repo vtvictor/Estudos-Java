@@ -4,6 +4,10 @@ import java.util.Scanner;
 import Gerenciamento_Museu.Artista;
 import Gerenciamento_Museu.Obra;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Principal {
 
 	public static void main(String[] args) {

@@ -2,6 +2,10 @@ package TesteVaga;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 class Q1{
     public static void main(String arg[]){
         int INDICE = 13;

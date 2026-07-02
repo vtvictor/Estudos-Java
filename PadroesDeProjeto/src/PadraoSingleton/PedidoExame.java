@@ -1,5 +1,9 @@
 package PadraoSingleton;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class PedidoExame {
 
 	private String diagnostico, tipoExame, dataExame;

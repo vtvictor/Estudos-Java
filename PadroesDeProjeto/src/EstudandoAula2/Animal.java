@@ -1,5 +1,9 @@
 package EstudandoAula2;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public abstract class Animal {
 	protected String getMakeNoise() {
 		return makeNoise;

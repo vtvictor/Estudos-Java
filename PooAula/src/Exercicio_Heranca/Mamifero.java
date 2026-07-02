@@ -1,5 +1,9 @@
 package Exercicio_Heranca;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Mamifero extends Animal {
 	private String alimento;
 	public Mamifero(String nome, float comprimento, int num_patas, String cor, String ambiente, float velocidade, String alimento) {

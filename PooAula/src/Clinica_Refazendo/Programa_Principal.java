@@ -2,6 +2,10 @@ package Clinica_Refazendo;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Programa_Principal {
 
 	public static void main(String[] args) {

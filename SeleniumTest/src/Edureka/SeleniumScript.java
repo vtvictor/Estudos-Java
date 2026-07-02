@@ -3,6 +3,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class SeleniumScript {
 
 	public static void main(String[] args) {

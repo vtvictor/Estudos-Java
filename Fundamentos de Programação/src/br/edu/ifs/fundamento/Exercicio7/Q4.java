@@ -1,6 +1,10 @@
 package br.edu.ifs.fundamento.Exercicio7;
 import java.util.Random;
 import java.util.Scanner;
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q4 {
 
 	public static void main(String[] args) {

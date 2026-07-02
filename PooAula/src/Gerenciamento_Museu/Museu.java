@@ -2,6 +2,10 @@ package Gerenciamento_Museu;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Museu {
 	private String nome;
 	private String endereco;

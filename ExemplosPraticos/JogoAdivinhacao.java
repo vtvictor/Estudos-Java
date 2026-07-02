@@ -3,6 +3,14 @@ package Java;
 import java.util.Scanner;
 import java.util.Random;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class JogoAdivinhacao {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

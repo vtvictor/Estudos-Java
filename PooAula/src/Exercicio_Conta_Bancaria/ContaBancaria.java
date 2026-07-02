@@ -1,5 +1,9 @@
 package Exercicio_Conta_Bancaria;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class ContaBancaria {
 	private String nomeCliente;
 	private String numConta;

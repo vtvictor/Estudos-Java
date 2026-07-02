@@ -2,6 +2,10 @@ package br.edu.ifs.fundamento.Exercicio2;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q1 {
 	public static void main (String[]args) {
 		Scanner entrada = new Scanner (System.in);

@@ -1,6 +1,10 @@
 package FactoryMethod;
 import java.time.LocalDate;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Paciente extends PedidoExame{
 
 	protected String nome, sexo, cor;

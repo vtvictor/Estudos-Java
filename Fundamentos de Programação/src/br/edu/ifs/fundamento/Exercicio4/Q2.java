@@ -1,5 +1,9 @@
 package br.edu.ifs.fundamento.Exercicio4;
 import java.util.Scanner;
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q2 {
 	
 	/* Os alunos do laboratório de robótica precisam de camisas para participar de uma

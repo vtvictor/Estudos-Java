@@ -1,5 +1,9 @@
 package Exercicio_Heranca;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Peixe extends Animal{
 	private String caracteristicas;
 

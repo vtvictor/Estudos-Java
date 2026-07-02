@@ -2,6 +2,10 @@ package Gerenciamento_Museu;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Artista {
 	private int registro;
 	private String nome;

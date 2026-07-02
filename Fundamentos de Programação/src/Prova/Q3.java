@@ -1,6 +1,10 @@
 package Prova;
 import  java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q3 {
 
 	public static void main(String[] args) {

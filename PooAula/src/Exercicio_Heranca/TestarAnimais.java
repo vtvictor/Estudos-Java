@@ -1,5 +1,9 @@
 package Exercicio_Heranca;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class TestarAnimais {
 
 	public static void main(String[] args) {

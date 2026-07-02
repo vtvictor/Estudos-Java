@@ -10,6 +10,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.Keys;
 import java.time.LocalTime;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Core {
 
 	public static void main(String[] args) {

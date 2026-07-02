@@ -2,6 +2,14 @@ package Exemplos;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class Aluno {
 	private String nome;
 	private int idade;

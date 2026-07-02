@@ -1,5 +1,9 @@
 package FactoryMethod;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Docentes extends Medico{
 
 	private String titulacao;

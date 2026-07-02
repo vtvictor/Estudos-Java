@@ -2,6 +2,10 @@ package PadraoBuilder;
 
 import java.time.LocalDate;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Paciente{
 
     private String nome, cor, sexo;

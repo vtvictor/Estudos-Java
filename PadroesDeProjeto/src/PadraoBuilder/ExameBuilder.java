@@ -1,5 +1,9 @@
 package PadraoBuilder;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public abstract class ExameBuilder {
 
     protected ExameProduct solicitacao;

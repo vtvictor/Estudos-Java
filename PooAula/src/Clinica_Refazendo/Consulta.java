@@ -1,5 +1,9 @@
 package Clinica_Refazendo;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Consulta {
 	private int codConsulta;
 	private Nutricionista nutriResponsavel;

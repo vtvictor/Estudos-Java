@@ -11,6 +11,10 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.Keys;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class TestesUnitarios {
 
 	public static void main(String[] args) {

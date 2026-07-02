@@ -1,5 +1,9 @@
 package Prova;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q1b {
 
 	public static void main(String[] args) {

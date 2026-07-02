@@ -6,6 +6,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class TestesUnitarios {
     private MetodosSimplificacao tempoPagina = new MetodosSimplificacao();
     

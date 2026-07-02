@@ -1,5 +1,9 @@
 package PadraoPrototype;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public abstract class MedicoPapeisPrototype {
     public abstract boolean emitirExame();
     public abstract MedicoPapeisPrototype clonar();

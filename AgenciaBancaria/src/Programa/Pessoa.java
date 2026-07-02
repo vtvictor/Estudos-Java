@@ -1,5 +1,13 @@
 package Programa;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class Pessoa {
 
     private static int counter = 1;

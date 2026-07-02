@@ -1,5 +1,9 @@
 package Exercicio_Conta_Bancaria;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class ContaEspecial extends ContaBancaria {
 	private double limite;
 

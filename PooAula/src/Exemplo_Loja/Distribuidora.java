@@ -2,6 +2,10 @@ package Exemplo_Loja;
 
 import java.util.ArrayList;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Distribuidora {
 	private String nomeEstabelecimento;
 	private int numLoja;

@@ -1,5 +1,9 @@
 package EstudandoAula2;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Carro {
 	private final Motor motor;
 

@@ -1,5 +1,9 @@
 package Exemplo_Loja;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class ProdutoPerecivel extends Produto {
 	private int validade;
 	

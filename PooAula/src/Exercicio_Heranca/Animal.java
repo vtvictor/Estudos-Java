@@ -1,5 +1,9 @@
 package Exercicio_Heranca;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Animal {
 	protected String nome;
 	protected float comprimento;

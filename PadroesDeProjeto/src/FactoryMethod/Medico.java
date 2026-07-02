@@ -1,5 +1,9 @@
 package FactoryMethod;
 
+/**
+ * implements - classe de exemplo.
+ */
+
 public class Medico implements IMedico{
 
 	protected String nome;

@@ -1,6 +1,10 @@
 package br.edu.ifs.fundamento.ListaRevisao;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q2 {
 /* Calcular a multa: Leia a velocidade de um carro e a velocidade máxima para a rua:
 1. Informe 50 reais se estiver até 10km/h acima;

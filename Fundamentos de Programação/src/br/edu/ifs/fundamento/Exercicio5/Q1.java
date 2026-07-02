@@ -1,6 +1,10 @@
 package br.edu.ifs.fundamento.Exercicio5;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q1 {
 
 	public static void main(String[] args) {

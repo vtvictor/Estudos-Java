@@ -1,6 +1,10 @@
 package Extra;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q2listaantiga {
 
 	public static void main(String[] args) {

@@ -1,6 +1,10 @@
 package Gerenciamento_Museu;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Programa_museu {
 
 	public static void main(String[] args) {

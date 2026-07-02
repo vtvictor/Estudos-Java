@@ -1,6 +1,10 @@
 package br.edu.ifs.fundamento.vetores;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Vetores {
 
 	public static void main(String[] args) {

@@ -1,5 +1,9 @@
 package FactoryMethod;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class ResidenteFactory extends Factory{
 
 	@Override

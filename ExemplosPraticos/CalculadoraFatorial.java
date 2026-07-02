@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class CalculadoraFatorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,5 +1,9 @@
 package PadraoPrototype;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Docentes extends DocentesPapeisPrototype{
 
 	private String titulacao;

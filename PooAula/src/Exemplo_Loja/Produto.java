@@ -4,6 +4,10 @@ import java.util.Random;
 um código para o produto, o nome do produto, marca do produto, a quantidade armazenada (em
 estoque) e o preço unitário. */
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Produto {
 	private Random codigoProduto = new Random();
 	private String nomeProduto;

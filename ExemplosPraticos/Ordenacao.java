@@ -1,5 +1,13 @@
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class Ordenacao {
     public static void main(String[] args){
         Scanner ler = new Scanner (System.in)

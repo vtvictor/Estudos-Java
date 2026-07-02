@@ -3,6 +3,10 @@ package Gerenciamento_Museu;
 código (int), ano de aquisição da obra(int), título (String), técnica
 utilizada(String), autor (Artista).
  */
+/**
+ * { - classe de exemplo.
+ */
+
 public class Obra {
 	private int codigo;
 	private int anoAquisicaoObra;

@@ -2,6 +2,10 @@ package TesteVaga;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q4 {
     public static void main(String[] args) {
 

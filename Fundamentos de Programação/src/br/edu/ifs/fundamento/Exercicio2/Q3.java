@@ -2,6 +2,10 @@ package br.edu.ifs.fundamento.Exercicio2;
 
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q3 {
 	public static void main (String[]args) {
 		/*Para os devidos testes, lembre-se que o tamanho da

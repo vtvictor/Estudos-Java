@@ -1,5 +1,9 @@
 package FactoryMethod;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public abstract class Factory {
 	
 	public abstract IMedico getMedico (String nome);

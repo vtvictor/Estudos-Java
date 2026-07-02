@@ -3,6 +3,10 @@ package br.edu.ifs.fundamento.aula1;
 import java.util.Scanner;
 
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Exemplo3 {
 	public static void main (String[]args) {
 		Scanner entrada = new Scanner (System.in);

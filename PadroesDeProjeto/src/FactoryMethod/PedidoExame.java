@@ -1,5 +1,9 @@
 package FactoryMethod;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class PedidoExame {
 
 	private String diagnostico, tipoExame, dataExame;

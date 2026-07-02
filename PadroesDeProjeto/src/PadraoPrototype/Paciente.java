@@ -1,6 +1,10 @@
 package PadraoPrototype;
 import java.time.LocalDate;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class Paciente extends PacientePapeisPrototype{
 
 	private String nome, sexo, cor;

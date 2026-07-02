@@ -1,6 +1,10 @@
 package br.edu.ifs.fundamento.Exercicio6;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Q3 {
 	/* 1/((n*1)*((n*1)+2)) */
 

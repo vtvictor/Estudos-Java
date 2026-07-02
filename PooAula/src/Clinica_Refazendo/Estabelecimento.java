@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
+/**
+ * { - classe de exemplo.
+ */
+
 public class Estabelecimento {
 	private String nomeEstabelecimento;
 	private String endereco;

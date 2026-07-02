@@ -1,5 +1,13 @@
 package BrasoftwareCloud;
 
+/**
+ * { - classe de exemplo.
+ */
+
+/**
+ * { - classe de exemplo.
+ */
+
 public class MetodosSimplificacao {
 	
 	

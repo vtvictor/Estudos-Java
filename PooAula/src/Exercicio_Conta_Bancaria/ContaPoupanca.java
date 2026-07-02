@@ -2,6 +2,10 @@ package Exercicio_Conta_Bancaria;
 
 import java.util.Calendar;
 
+/**
+ * extends - classe de exemplo.
+ */
+
 public class ContaPoupanca extends ContaBancaria{
 	private int diaRendimento;
 	
